@@ -63,10 +63,7 @@ p{line-height: 28px;}
 /* ANIMATION */
 
 /* https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/onscroll */
-/* Purtroppo è una tecnologia ancora sperimentale e potrebbe non funzionare bene su tutti i browser.
-Ad ogni modo, ho assemblato le funzioni da usare come punto di partenza, dovrei sostituire la funzione 
-wheel con onscroll applicato sul ViewPort, come documentato su MDN.
-Tuttavia, per il momento, ho preferito usare una libreria, ScrollReveal*/
+
 
 /* .bot-an{
     position:relative;
