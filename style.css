@@ -1,0 +1,532 @@
+/*Impostiamo il border box per applicare il padding degli elementi all'interno degli elementi per
+non avere problemi di sovrapposizione di elementi*/
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}    
+
+/* DEFAULT */
+
+body{margin:0px; font-family: 'Roboto', sans-serif; font-size: 14px; background: linear-gradient(to bottom right, #c0a78c, #ede6de); }
+                                                       
+
+
+a{text-decoration: none;}
+
+h1, h2, h3, h4, h5, p {color: #663300; padding-bottom: 30px;}
+p{line-height: 28px;}
+
+.big-text{font-size: 70px;font-weight: 700;}
+.med-text{font-size: 50px;font-weight: 700;}
+.con-text{font-size: 24px;}
+.reg-text{font-size: 18px; font-weight: 500;}
+.lig-text{font-size: 13px;}
+.intro-text{text-transform: uppercase;font-size: 20px;font-weight: bold;}
+.tw{color: white;}
+.tac{text-align: center;}
+.taj{text-align: justify;}
+.tar{text-align: right;}
+
+/* Helpers */
+.mt-1{margin-top: 10%;}
+.mt-2{margin-top: 8%;}
+.mt-3{margin-top: 6%;}
+.mt-4{margin-top: 4%;}
+.mt-5{margin-top: 2%;}
+
+.pb-0{padding-bottom: 0%;}
+
+.pl-1{padding-left: 8%;}
+.pl-2{padding-left: 4%;}
+.pl-3{padding-left: 2%;}
+
+.pr-1{padding-right: 8%;}
+.pr-2{padding-right: 4%;}
+.pr-3{padding-right: 2%;}
+
+
+.btn{padding: 18px 28px; background: linear-gradient(#1a0d00, #663300); color: #fff; display: inline-block; border-radius: 3px;}
+
+@media (max-width:768px) {
+    .big-text{font-size: 40px;}
+    .med-text{font-size: 30px;}
+    .reg-text{font-size: 18px;}
+    .lig-text{font-size: 12px;} 
+    .intro-text{text-transform: uppercase;font-size: 15px;font-weight: bold;}
+
+    .dn{display: none;}
+}
+
+/* ANIMATION */
+
+/* https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/onscroll */
+/* Purtroppo è una tecnologia ancora sperimentale e potrebbe non funzionare bene su tutti i browser.
+Ad ogni modo, ho assemblato le funzioni da usare come punto di partenza, dovrei sostituire la funzione 
+wheel con onscroll applicato sul ViewPort, come documentato su MDN.
+Tuttavia, per il momento, ho preferito usare una libreria, ScrollReveal*/
+
+/* .bot-an{
+    position:relative;
+    animation:botan 0.4s;
+}
+@keyframes botan{from{bottom: -200px;opacity:0;} to{bottom:0;opacity:1}} */
+/*
+.fade-in{
+    animation: 3s ease 0s 1 normal none running tropac;
+    /*animation-duration: 4s;
+    animation-timing-function: ease; oppure potrei dare una funzione cubic-bezier(.215,.61,.355,1)
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: opac; 
+}
+
+@keyframes tropac{
+    0%,10%{bottom:-200px;opacity:0;}
+    10%{bottom:-200px;opacity:0;}
+    100%{bottom:0;opacity:1;}  
+}
+
+#fade-n1{animation: 3s ease 0s 1 normal none paused opacn2;}
+.fade-n2{animation: 4s ease 0s 1 normal none paused opacn2;}
+
+@keyframes opacn2{
+    from{opacity:0} to{opacity:1}
+    /* 0%,15%{bottom:-200px;opacity:0;}
+    15%{bottom:-200px;opacity:0;}
+    100%{bottom:0;opacity:1;}   
+}
+
+.fade-n3{animation: 3s ease 0s 1 normal none paused tropac;}
+.fade-n4{animation: 4s ease 0s 1 normal none paused opacn4;}
+
+@keyframes opacn4{
+    0%,15%{bottom:-200px;opacity:0;}
+    15%{bottom:-200px;opacity:0;}
+    100%{bottom:0;opacity:1;}  
+}
+
+.fade-n5{animation: 3s ease 0s 1 normal none paused tropac;}
+.fade-n6{animation: 4s ease 0s 1 normal none paused opacn6;}
+
+@keyframes opacn6{
+    0%,15%{bottom:-200px;opacity:0;}
+    15%{bottom:-200px;opacity:0;}
+    100%{bottom:0;opacity:1;}  
+}*/
+
+/* HEADER */
+
+.header{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 2; /*e se invece gli dessi 1?, come per la cover?*/
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    padding: 30px;
+    display: flex;
+    max-width: 1350px; 
+}
+
+.hamburger{
+    display: none;
+}
+
+.menu{
+    transition: all 1s cubic-bezier(.295,.61,.355,1);
+    width: 100%;
+    z-index: 0;
+    
+}
+
+.menu li{
+    display: inline-block;
+    margin-left: 30px;
+    /* border: 1.5px solid #fff; border-radius: 3px;  */
+}
+
+.menu li a{
+    color: #fff;
+    padding: 15px;
+    display: block;   
+}
+
+.contacts a {
+    color: #fff;
+    padding: 15px;
+    display: block; 
+    float: right;
+}
+
+.fade-in{animation: 2s ease 0s 1 normal none running opacity}
+@keyframes opacity {from{opacity:0;} to{opacity:1;}}
+
+@media (max-width:768px) {
+    .contacts{display: none;}
+    .logo{z-index: 1;}
+    .menu{position: absolute; top: 0; right: -100%; background: linear-gradient(to right top,#1a1a1a, #404040) ; height: 100vh; padding-top: 80px;}
+    .menu li{display: block; margin-left: 15px; padding-top: 15px;text-transform: uppercase;border: none;}
+    .hamburger{display: block; position: absolute; top: 35px;right: 30px;}
+
+    .bar1, .bar2, .bar3 {    
+        width: 35px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .change .bar1 {-webkit-transform: rotate(-43deg) translate(-7px, 6px);
+                    transform: rotate(-43deg) translate(-7px, 6px);}
+    .change .bar2 {opacity: 0;}
+    .change .bar3 {-webkit-transform: rotate(43deg) translate(-6px, -6px);
+                    transform: rotate(43deg) translate(-7px, -6px);} 
+}
+
+/* COVER */
+
+.cover{
+    position: relative; /*relative su elemento contenitore (per il contenuto, id.coffee-art) */
+    height: 100vh;
+    display: flex; 
+    width: 100%; 
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.9), rgba(0,0,0,0.1)); /*url('test.PNG') no-repeat center center;*/
+    background-size: cover;
+    overflow: hidden;
+    border: 1px solid red;
+}
+
+.cover:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    background: #000;
+    opacity: 0.3;
+}
+
+.cover__content{
+    width: 100%;  
+    max-width: 1350px;
+    margin: 0 auto; 
+    padding: 30px; 
+    z-index: 1;
+    position: relative;
+}
+
+.cover__content h1,
+.cover__content p{
+    color: #fff;
+}
+
+#coffee-art {
+    position: absolute; /* absolute su elemento contenuto  */
+    top: 0;
+    left: 0;
+    border: 1px solid red;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
+
+@media (max-width:768px) {
+    #coffee-art {display: none;}
+    .cover{background: linear-gradient(0deg, rgba(0,0,0,.9), rgba(0,0,0,0.1)), 
+        url('test.PNG') no-repeat center center; background-size: cover;}
+}
+
+
+
+/* POSTER */
+
+.poster{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    border: 1px solid red; 
+    align-items: center;
+}
+
+.poster__img {
+    width: 65%;
+}
+
+.poster__img img {
+    object-fit: cover; width: 100%; height: 100%;
+}
+
+.poster__content {
+    width: 35%;
+    padding: 50px; 
+}
+
+@media (max-width: 768px) {
+    .poster{flex-wrap: wrap; height: auto;}
+    .poster__img, .poster__content{width: 100%;}
+}
+
+/* PICTURE */
+
+.picture{
+    border: 1px solid red;
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.7), rgba(0,0,0,0.2)), url('coffee-shop2.webp') no-repeat center center;
+    background-size: cover;
+    border: 1px solid red;
+}
+
+.picture__title{
+    width: 50%;
+    padding: 30px;
+}
+
+.picture__text{
+    width: 50%;
+    padding: 80px;
+}
+
+.picture__title--mob{display: none;}
+
+@media (max-width: 768px) {
+    .picture__title{display: none;}
+    .picture{flex-wrap: wrap; padding: 5px; height: auto;}
+    .picture__title--mob{display: block;}
+    .picture__title--mob,
+    .picture__text{width: 100%; padding: 25px;}
+}
+
+/* GRID */
+
+.grid{
+    display: flex;
+    max-width: 1350px;
+    padding: 0 3%;
+    margin: 0 auto;
+    border: 1px solid red;
+    width: 100%;
+    align-items: center; 
+}
+
+.col-1{
+    width: 20%;
+    padding: 2%;
+}
+
+.col-2{
+    width: 80%;
+    /* padding-left: 20%; */
+}
+
+@media (max-width: 768px) {
+    .grid{flex-wrap: wrap; height: auto;}
+    .col-1,
+    .col-2{width: 100%;}
+}
+
+/* DESKTOP CONTAINER SLIDESHOW*/
+
+.des-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.des-container__b1{
+    width: 46%;
+    padding: 1%;
+}
+
+.des-container__b2{
+    width: 46%;
+    padding: 1%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 450px;
+    position: relative;
+    margin: auto;
+}
+
+.img-slide {
+    width:100%; 
+    height:450px; 
+    /* border: 1px solid red;  */
+    border-radius:100%;
+    margin-bottom: 3%;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 2%;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background: linear-gradient(#1a0d00, #663300) rgba(0,0,0,0.8);
+    border-radius: 50%;
+}
+  
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    background: linear-gradient(#1a0d00, #663300);
+    border: 1px solid #663300;
+    border-radius: 2%;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10%;
+    width: 50%;
+    text-align: center;
+}
+
+/* The dots/bullets/indicators */
+/* .dot_b1, .dot_b2 {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+} */
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+
+@media (max-width: 768px) {
+    .des-container{display: none;}
+}
+
+/* MOBILE CONTAINER HORIZONTAL SCROLLING*/
+
+.mob-container{
+    display: flex;
+    display: none;
+    width: 100%;
+    align-items: center; 
+}
+
+.mob-container__scroll-h1{
+    width: 46%;
+    overflow: hidden;
+    padding: 2%;
+}
+
+.mob-container__scroll-h2{
+    width: 46%;
+    overflow: hidden;
+    padding: 2%;
+}
+
+.sliding-list {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    float: none;
+    height: 400px;
+	overflow: hidden;
+	overflow-x: auto;
+}
+
+.slide{
+    display: inline-block;
+    height: 90%;
+    width: auto;
+    margin: 0 20px;
+    border: 2px solid red;
+    border-radius: 100%;
+    max-width: 360px;
+    -webkit-overflow-scrolling: touch
+}
+
+@media (max-width: 768px) {
+    .mob-container{display: block; flex-wrap: wrap; height: auto;}
+    .mob-container__scroll-h1,
+    .mob-container__scroll-h2{width: 100%;}
+    .sliding-list{height: 250px;}
+    .slide{min-width: 225px;}
+}
+
+/* FOOTER */
+
+.footer {
+    background-image: linear-gradient(to bottom right, #1a0d00, #4d2600);
+    display: flex;
+    width: 100%;
+    padding: 6%;
+    /* border: 1px solid red; */
+}
+
+.footer__col-3{
+    width: 60%;
+}
+
+.footer__col-4{
+    width: 20%;
+}
+
+.footer__col-5{
+    width: 20%;
+}
+
+@media (max-width: 768px) {
+    .footer{flex-wrap: wrap; height: auto;}
+    .footer__col-3{width: 50%;}
+    .footer__col-4{width: 50%;}
+    .footer__col-5{width: 100%;}
+}
+

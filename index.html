@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--il seguente tag va aggiunto prima dello stile per resettare le proprietà css del nostro foglio di stile-->
+    <!--Il reset css ci permette di scrivere lo stesso css su tutti i browser-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Caffetteria</title>
+</head>
+<body>
+
+    <div class="header fade-in">
+        <div class="logo">
+            <img src="coffeeIcon.webp" alt="logo" width="45px" height="auto">
+        </div>
+        <ul id="menu-mob" class="menu reg-text">
+            <li><a href="">Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div id="ham" class="hamburger" onclick="enter()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="contacts">
+            <a href="" class="btn">About</a>
+        </div>
+    </div>
+
+    <div class="cover">
+        <div class="cover__content opacity-transition">
+            <p class="intro-text pb-0">Penge Cafe</p>
+            <h1 class="big-text">Benvenuto in caffetteria</h1>
+            <a href="" class="btn">Scopri le nostre proposte</a>
+        </div>
+        <video autoplay muted loop id="coffee-art">
+            <source src="coffee.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="poster mt-1">
+        <div class="poster__img opacity-transition">
+            <img src="waffle.jpg" alt="test">
+        </div>
+        <div id="poster-an2" class="poster__content opacity-transition">
+            <h2 class="med-text">Ti coccoliamo anche a casa</h2>
+            <p class="reg-text">Scopri le nostre proposte da asporto per rendere speciale la tua giornata</p>
+            <a href="" class="btn">Appena sfornati</a>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="col-1 opacity-transition">
+            <!-- <p class="reg-text mt-3 pb-0 tac">Sottotitolo</p> -->
+            <p class="lig-text taj">Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura che la diritta via era smarrita</p>
+            <p class="lig-text taj">Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura che la diritta via era smarrita</p>
+            <p class="dn lig-text taj">Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura che la diritta via era smarrita</p>
+        </div>
+        <div class="col-2 opacity-transition">
+            <h2 class="med-text tac">Componi la tua colazione</h2>
+            <p class="dn reg-text pl-1">Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura
+                 che la diritta via era smarrita. Ahi quanto a dir qual era è cosa dura, esta selva selvaggia 
+                 e aspra e forte che nel pensier rinova la paura, tant'è amara che poco è più morte.</p>
+
+            <div class="des-container">
+
+            <div class="des-container__b1 slideshow-container zoom">
+                <div class="mySlides_b1 fade">
+                  <img src="img/espresso.webp" class="img-slide">
+                  <div class="text">Espresso</div>
+                </div>
+                <div class="mySlides_b1 fade">
+                  <img src="img/aromatizzato.webp" class="img-slide">
+                  <div class="text">Aromatizzato</div>
+                </div>
+                <div class="mySlides_b1 fade">
+                  <img src="img/macchiato2.webp" class="img-slide">
+                  <div class="text">Macchiato</div>
+                </div>
+                <div class="mySlides_b1 fade">
+                    <img src="img/affogato.webp" class="img-slide">
+                    <div class="text">Affogato</div>
+                </div>
+                <div class="mySlides_b1 fade">
+                    <img src="img/sormontato.webp" class="img-slide">
+                    <div class="text">Sormontato</div>
+                </div>
+                <div class="mySlides_b1 fade">
+                    <img src="img/corretto.webp" class="img-slide">
+                    <div class="text">Corretto</div>
+                </div>
+                <div class="mySlides_b1 fade">
+                    <img src="img/doppio.webp" class="img-slide">
+                    <div class="text">Espresso doppio</div>
+                </div>
+                <div class="mySlides_b1 fade">
+                    <img src="img/cappuccino.webp" class="img-slide">
+                    <div class="text">Cappuccino</div>
+                </div>
+                <div class="mySlides_b1 fade">
+                    <img src="img/caffelatte.webp" class="img-slide">
+                    <div class="text">CaffeLatte</div>
+                </div>
+                <div class="mySlides_b1 fade">
+                    <img src="img/cioccolata.webp" class="img-slide">
+                    <div class="text">Cioccolata calda</div>
+                </div>
+                <div class="mySlides_b1 fade">
+                    <img src="img/tea.webp" class="img-slide">
+                    <div class="text">Tea al limone</div>
+                </div>
+                <div class="mySlides_b1 fade">
+                    <img src="img/tisana.webp" class="img-slide">
+                    <div class="text">Tisana alla menta</div>
+                </div>
+                <a class="prev" onclick="plusSlides_b1(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides_b1(1)">&#10095;</a>
+            </div>
+            <!-- <br>
+            <div style="text-align:center">
+              <span class="dot_b1" onclick="currentSlide_b1(1)"></span> 
+              <span class="dot_b1" onclick="currentSlide_b1(2)"></span> 
+              <span class="dot_b1" onclick="currentSlide_b1(3)"></span> 
+            </div>  -->
+            
+            <div class="des-container__b2 slideshow-container zoom">
+                <div class="mySlides_b2 fade">
+                  <img src="img/croissant.webp" class="img-slide">
+                  <div class="text">Croissant</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                  <img src="img/sfoglia.webp" class="img-slide">
+                  <div class="text">Sfoglie</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                  <img src="img/waffles.webp" class="img-slide">
+                  <div class="text">Waffles</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                    <img src="img/crepes.webp" class="img-slide">
+                    <div class="text">Crepes</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                    <img src="img/pancake.webp" class="img-slide">
+                    <div class="text">Pancakes</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                    <img src="img/flan.webp" class="img-slide">
+                    <div class="text">Flan</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                    <img src="img/crostata.webp" class="img-slide">
+                    <div class="text">Crostata</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                    <img src="img/ciambella.webp" class="img-slide">
+                    <div class="text">Ciambella</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                    <img src="img/cake.webp" class="img-slide">
+                    <div class="text">Torta al cioccolato</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                    <img src="img/biscotti.webp" class="img-slide">
+                    <div class="text">Biscotti</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                    <img src="img/macaroon.webp" class="img-slide">
+                    <div class="text">Macaroon</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                    <img src="img/cupcake.webp" class="img-slide">
+                    <div class="text">Cupcakes</div>
+                </div>
+                <div class="mySlides_b2 fade">
+                    <img src="img/brownies.webp" class="img-slide">
+                    <div class="text">Brownies</div>
+                </div>
+                <a class="prev" onclick="plusSlides_b2(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides_b2(1)">&#10095;</a>
+            </div>
+                <!-- <br>
+                <div style="text-align:center">
+                  <span class="dot_b2" onclick="currentSlide_b2(1)"></span> 
+                  <span class="dot_b2" onclick="currentSlide_b2(2)"></span> 
+                  <span class="dot_b2" onclick="currentSlide_b2(3)"></span> 
+                </div> -->
+
+            </div>
+
+            <div class="mob-container">
+            <div class="mob-container__scroll-h1">
+                <ul class="sliding-list">
+                    <img src="img/espresso.webp" class="slide">
+                    <img src="img/aromatizzato.webp" class="slide">
+                    <img src="img/macchiato2.webp" class="slide">
+                    <img src="img/affogato.webp" class="slide">
+                    <img src="img/sormontato.webp" class="slide">
+                    <img src="img/corretto.webp" class="slide">
+                    <img src="img/doppio.webp" class="slide">
+                    <img src="img/cappuccino.webp" class="slide">
+                    <img src="img/caffelatte.webp" class="slide">
+                    <img src="img/cioccolata.webp" class="slide">
+                    <img src="img/tea.webp" class="slide">
+                    <img src="img/tisana.webp" class="slide">
+                </ul>
+            </div>
+            <div class="mob-container__scroll-h2">
+                <ul class="sliding-list">
+                    <img src="img/croissant.webp" class="slide">
+                    <img src="img/sfoglia.webp" class="slide">
+                    <img src="img/waffles.webp" class="slide">
+                    <img src="img/crepes.webp" class="slide">
+                    <img src="img/pancake.webp" class="slide">
+                    <img src="img/flan.webp" class="slide">
+                    <img src="img/crostata.webp" class="slide">
+                    <img src="img/ciambella.webp" class="slide">
+                    <img src="img/cake.webp" class="slide">
+                    <img src="img/biscotti.webp" class="slide">
+                    <img src="img/macaroon.webp" class="slide">
+                    <img src="img/cupcake.webp" class="slide">                            
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="picture">
+        <div class="picture__title text-cw opacity-transition">
+            <a href="" class="intro-text tw btn">Visita la nostra gallery</a>
+        </div>
+        <div class="picture__text text-cw opacity-transition">
+            <h4 class="reg-text tw pb-0">Sottotitolo</h4>
+            <p class="lig-text tw">Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura che la diritta via era smarrita</p>
+            <h4 class="reg-text tw pb-0">Sottotitolo</h4>
+            <p class="lig-text tw">Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura che la diritta via era smarrita</p>
+            <h4 class="reg-text tw pb-0">Sottotitolo</h4>
+            <p class="lig-text tw">Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura che la diritta via era smarrita</p>
+            <h4 class="reg-text tw pb-0">Sottotitolo</h4>
+            <p class="lig-text tw">Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura che la diritta via era smarrita</p>
+        </div>
+        <div class="picture__title--mob text-cw opacity-transition">
+            <a href="" class="intro-text tw btn">Visita la nostra gallery</a>
+        </div>
+    </div>
+
+    <div class="footer tw tar pr-3">
+        <div class="footer__col-3 pr-3 mt-5 opacity-transition">
+            <p class="lig-text tw tar pb-0">Sponsors</p>
+            <p class="lig-text tw tar pb-0">Partners</p>
+            <p class="lig-text tw tar">Clients</p>
+        </div>
+        <div class="footer__col-4 pr-3 mt-4 opacity-transition">
+            <p class="lig-text tw tar pb-0">Our Team</p>
+            <p class="lig-text tw tar">Join with us</p>
+        </div>
+        <div class="footer__col-5 pr-3 mt-3 opacity-transition">
+            <i class="fa fa-facebook-square" style="font-size:24px"></i>
+            <i class="fa fa-linkedin-square" style="font-size:24px"></i>
+            <i class="fa fa-instagram" style="font-size:24px"></i>
+            <i class="fa fa-flickr" style="font-size:24px"></i>
+            <p class="lig-text tw tar">Follow us</p>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script>
+    ScrollReveal().reveal('.opacity-transition',  { distance: '100px', duration: 1800, easing: 'ease', interval: 600 });
+    ScrollReveal().reveal('.zoom',  { duration: 2000, easing: 'ease', interval: 300, scale: 0.70, mobile: false });
+</script>
+</body>
+</html>
