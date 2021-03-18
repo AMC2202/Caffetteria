@@ -154,3 +154,54 @@ function amount(price1, price2){
 //   document.getElementById("item1").innerHTML = row;
 
 // }
+
+function openLog(){
+  document.getElementById('login').style.display = "block";
+  document.getElementById('signup').style.display = "none";
+}
+
+function openSign(){
+  document.getElementById('signup').style.display = "block";
+  document.getElementById('login').style.display = "none";
+}
+
+
+// Get the modal (loginForm)
+var modal_log = document.getElementById('login');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event1) {
+    if (event1.target == modal_log) {
+        modal_log.style.display = "none";
+    }
+}
+
+// Get the modal (signupForm)
+var modal_sign = document.getElementById('signup');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event2) {
+  if (event2.target == modal_sign) {
+      modal_sign.style.display = "none";
+  }
+}
+
+// Open and Close product's books
+let book2 = document.querySelector('.book:nth-child(2)');
+
+setTimeout( function() {
+	book2.classList.add('open');
+	
+	setTimeout( function() {
+		book2.classList.remove('open');
+	}, 1500);
+}, 500);
+
+
+//Carousel showcase
+function classToggle() {
+  var window = document.querySelector('.window__content');
+  window.classList.toggle('step-animation');
+}
+
+document.querySelector('#toggle').addEventListener('click', classToggle);
