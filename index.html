@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head id="head">
+<head id="head"></head>
     <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!--il seguente tag va aggiunto prima dello stile per resettare le proprietà css del nostro foglio di stile-->
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet"> -->
     <!-- <title>Caffetteria</title> -->
-</head>
+
 <body>
     <div id="nav" class="header fade-in"></div>
         <!-- <div class="logo">
@@ -32,6 +32,31 @@
         <!-- <div class="contacts reg-text">
             <li><a href="">Login</a></li>
         </div> -->
+
+    <div id="login" class="modal"></div>
+
+    <div id="signup" class="modal"></div>
+
+        <!-- <form class="modal-content animate">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+        
+            <div class="log-container">
+              <label for="uname"><p class="reg-text pb-0 tsl">Username</p></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+              <label for="psw"><p class="reg-text pb-0 tsl">Password</p></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+              <button type="submit">Login</button> -->
+              <!-- <label>
+                <input type="checkbox" checked="checked" name="remember">Remember me
+              </label> -->
+            <!-- </div> -->
+            <!-- <div class="log-container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div> -->
+        <!-- </form> -->
     
     <div class="cover">
         <div class="cover__content fade-in">
@@ -46,7 +71,7 @@
     
     <div class="poster mt-1">
         <div class="poster__img">
-            <img src="waffle.jpg" alt="test">
+            <img src="img/waffle.webp" alt="poster">
         </div>
         <div class="poster__content">
             <h2 class="med-text">Ti coccoliamo anche a casa</h2>
@@ -289,5 +314,7 @@
 <script src="template-parts/head.js"></script>
 <script src="template-parts/navbar.js"></script>
 <script src="template-parts/footer.js"></script>
+<script src="template-parts/login.js"></script>
+<script src="template-parts/signup.js"></script>
 </body>
 </html>
