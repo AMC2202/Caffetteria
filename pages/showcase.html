@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head"></head>
+<style>
+    * {
+        margin: 0px auto;
+        padding: 0px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="nav" class="header fade-in"></div>
+    <div id="login" class="modal"></div>
+    <div id="signup" class="modal"></div>
+    <div class="cover cover--showcase">
+        <div class="cover__content fade-in">
+            <h1 class="big-text">Gustali ancora caldi</h1>
+        </div>
+    </div>
+
+    <div class="showcase-container" style="border: 1px solid red;">
+        <h2 class="med-text tsd mt-3 tal">Dal forno alla vetrina</h2>
+        <p class="reg-text tsd">SELECTION TODAY</p>
+        <div class="window" style="margin: 5%;">
+            <div class="window__content">
+                <div class="window__item" style="display: flex; align-items: center; justify-content: center;">
+                    <span class="overlay tsd">Brioches al cioccolato</span>
+                </div>
+                <div class="window__item" style="display: flex; align-items: center; justify-content: center;">
+                    <span class="overlay tsd">Cialde all'uvetta</span>
+                </div>
+                <div class="window__item" style="display: flex; align-items: center; justify-content: center;">
+                    <span class="overlay tsd">In allestimento</span>
+                </div>
+                <div class="window__item" style="display: flex; align-items: center; justify-content: center;">
+                    <span class="overlay tsd">Croissant all'albicocca</span>
+                </div>
+                <div class="window__item" style="display: flex; align-items: center; justify-content: center;">
+                    <span class="overlay tsd">Bomboloni alla crema</span>
+                </div>
+                <div class="window__item" style="display: flex; align-items: center; justify-content: center;">
+                    <span class="overlay tsd">In allestimento</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="poster mt-0">
+        <div class="poster_showcase_content">
+            <h2 class="med-text pb-0 tsd">Dessert</h2>
+            <p class="reg-text tsd">OUR MOST POPULAR</p>
+            <p class="con-text pb-0" style="float:right">2,50</p>
+            <p class="con-text pb-0">Brioches al cioccolato</p>
+            <hr>
+            <p class="con-text pb-0" style="float:right">2,50</p>
+            <p class="con-text pb-0">Cialde all'uvetta</p>
+            <hr>
+            <p class="con-text pb-0" style="float:right">2,80</p>
+            <p class="con-text pb-0">Croissant all'albicocca</p>
+            <hr>
+            <p class="con-text pb-0" style="float:right">3,20</p>
+            <p class="con-text pb-0">Bomboloni alla crema</p>
+            <hr>
+            <p class="con-text pb-0" style="float:right">2,30</p>
+            <p class="con-text pb-0">Ciambelle alla cannella</p>
+            <hr>
+            <p class="con-text pb-0" style="float:right">2,80</p>
+            <p class="con-text pb-0">Fagottini al miele</p>
+            <hr>
+
+        </div>
+        <div class="poster_showcase_img">
+            <img src="C:/Users/Caffeina/Caffetteria/img/coffee-room.webp" alt="coffee-room">
+            <a href="" class="btn" style="margin-left: 30%;">Prenota un tavolo</a>
+        </div>
+    </div>
+
+    <div class="poster_showcase_box mt-5" style="border: 1px solid red;">
+        <div class="customer_surveys" style="border: 1px solid red;">
+            <a href="" class="btn" style="margin-left: 37%;">Leggi l'articolo</a>
+            <div class="theCube">
+                <div class="topFlip">
+                    <h1 style="z-index: 1; color: aliceblue; font-weight: 700; font-size: 18px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Preferisci una tazzina di caffè</h1>
+                </div>
+                <div class="bottomFlop">
+                    <h1 style="z-index: 1; color: aliceblue; font-weight: 700; font-size: 18px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">o tendi a privilegiare il sapore del tè?</h1>
+                </div>
+            </div>
+            <!-- <p style="padding-left:10%; padding-right: 10%; padding-top:0%;" class="pb-0">Fonte - <em>Understanding the role
+                of bitter taste perception in coffee, tea and alcohol consumption through Mendelian 
+                randomization</em>, studio pubblicato su Nature il 15/11/2018
+            </p> -->
+        </div>
+        <div class="delivery_item" style="border: 1px solid red;">
+            <div class="inner_container">
+                <div class="outer_container">
+                    <div class="title_container">
+                        <div class="title_list">
+                            <h3 class="tsd">A casa tua in giornata
+                                <div style="float:right;font-size:16px; margin-right:2%" id="tot">0&euro;</div>
+                                <a href="#confirm" onclick="orderConfirmation()" class="bag" style="color:white; float: right; margin-right:2%; cursor:pointer;"><i class="fa fa-shopping-basket"></i></a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <table class="table">
+                            <tr>
+                                <th>Prodotto</th>
+                                <th>Nome</th>
+                                <th>Consegna</th>
+                                <th>Quantità</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="" class="" id="product_select">
+                                        <option value="Brioches al cioccolato">Brioches al cioccolato</option>
+                                        <option value="Cialde all'uvetta">Cialde all'uvetta</option>
+                                        <option value="Croissant albicocca">Croissant all'albicocca</option>
+                                        <option value="Bomboloni alla crema">Bomboloni alla crema</option>
+                                        <option value="Ciambelle cannella">Ciambelle alla cannella</option>
+                                        <option value="Fagottini al miele">Fagottini al miele</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" class="user_name" />
+                                </td>
+                                <td>
+                                    <select name="" id="time_select">
+                                        <option value="8:00 - 9:00">8:00 - 9:00</option>
+                                        <option value="16:00 - 17:00">16:00 - 17:00</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="qta_select">
+                                        <option value="1pz. 2.2&euro;">1</option>
+                                        <option value="2pz. 4.4&euro;">2</option>
+                                        <option value="3pz. 6.6&euro;">3</option>
+                                        <option value="4pz. 8.8&euro;">4</option>
+                                        <option value="5pz. 10&euro;">5</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="user_address">Indirizzo</th>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <input type="text" class="input_description" style="width: 108%;" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <button class="btn_add" onclick="add_to_list()">Aggiungi</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="item_container">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="confirm" class="overlap">
+            <div class="popup card">
+                <div class="card-inner-2">
+                    <div class="card-front">
+                        <p style="float: right;"><a href="#" style="color: white; font-weight: 600;">x</a></p>
+                        <div class="card-title"> Modulo di conferma</div>
+                        <!-- <a class="close" href="#">&times;</a> -->
+                        <h6 id="greetings" style="font-weight: 700; font-size: 80%; line-height: normal; background: rgba(0, 0, 0, 0.3);"></h6>
+                        <h6 id="message" style="font-weight: 700; font-size: 80%; line-height: normal; background: rgba(0, 0, 0, 0.3);"></h6>
+                        <h6 id="close"></h6>
+                        <h6 id="basket"></h6>
+                        <h6 id="turn"></h6>
+                    </div>
+                    <div class="card-back">
+                        <h6 class="tac">Grazie per averci scelto.</h6>
+                        <h6 class="tac">Saremo da te tra poco.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!--  -->
+
+    <div id="foo" class="footer tw tar pr-3"></div>
+
+    <!-- <script src="C:/Users/Caffeina/Caffetteria/script.js"></script> -->
+    <script src="C:/Users/Caffeina/Caffetteria/pages/showcase.js"></script>
+    <script src="C:/Users/Caffeina/Caffetteria/template-parts/head.js"></script>
+    <script src="C:/Users/Caffeina/Caffetteria/template-parts/navbar.js"></script>
+    <script src="C:/Users/Caffeina/Caffetteria/template-parts/footer.js"></script>
+    <script src="C:/Users/Caffeina/Caffetteria/template-parts/login.js"></script>
+    <script src="C:/Users/Caffeina/Caffetteria/template-parts/signup.js"></script>
+</body>
+</html>
