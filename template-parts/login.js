@@ -21,3 +21,18 @@ var loginForm =
 //</div> 
 
 document.getElementById("login").innerHTML = loginForm;
+
+function openLog(){
+    document.getElementById('login').style.display = "block";
+    document.getElementById('signup').style.display = "none";
+  }
+
+// Get the modal (loginForm)
+var modal_log = document.getElementById('login');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event1) {
+    if (event1.target == modal_log) {
+        modal_log.style.display = "none";
+    }
+}

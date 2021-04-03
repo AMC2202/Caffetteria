@@ -17,3 +17,18 @@ var signupForm =
     '</form>';
 
 document.getElementById("signup").innerHTML = signupForm;
+
+function openSign(){
+    document.getElementById('signup').style.display = "block";
+    document.getElementById('login').style.display = "none";
+  }
+
+  // Get the modal (signupForm)
+var modal_sign = document.getElementById('signup');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event2) {
+  if (event2.target == modal_sign) {
+      modal_sign.style.display = "none";
+  }
+}
